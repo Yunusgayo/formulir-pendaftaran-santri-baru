@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Santri Baru</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      /* Header Styling */
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #fff;
+      }
+
+      header img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Form Styling */
+      form {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #1cda64;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(228, 216, 56);
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Responsive Styling */
+      @media only screen and (max-width: 600px) {
+        form {
+          padding: 10px;
+        }
+
+        label {
+          font-size: 0.9em;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img src="logo2.jpeg" alt="Logo Pesantren Ruhul A'zham" />
+      <h1>Pesantren Ruhul A'zham</h1>
+    </header>
+
+    <!-- Formulir Pendaftaran -->
+    <form action="proses_pendaftaran.php" method="post">
+      <fieldset>
+        <legend>FORMULIR PENDAFTARAN MIS, MTSS, DAN MA RUHUL A’ZHAM</legend>
+        <p>(DATA INI PENTING, ISI LAH DENGAN BENAR DAN TEPAT)</p>
+
+        <!-- Data Pribadi -->
+        <label for="nama">1. Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="jenis_kelamin">2. Jenis Kelamin:</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+
+        <label for="tempat_lahir">3. Tempat/Tanggal Lahir:</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" required />
+        <input type="date" id="tgl_lahir" name="tgl_lahir" required />
+
+        <!-- Informasi Keluarga -->
+        <!-- Lanjutkan dengan elemen formulir sesuai dengan kebutuhan Anda -->
+        <!-- ... (Bagian lain dari HTML tetap sama) ... -->
+
+        <!-- Informasi Keluarga -->
+        <label for="anak_ke">4. Anak Ke:</label>
+        <input type="number" id="anak_ke" name="anak_ke" required />
+
+        <label for="jumlah_saudara">5. Jumlah Saudara:</label>
+        <input
+          type="number"
+          id="jumlah_saudara"
+          name="jumlah_saudara"
+          required
+        />
+
+        <label for="agama">6. Agama:</label>
+        <input type="text" id="agama" name="agama" required />
+
+        <label for="golongan_darah">7. Golongan Darah:</label>
+        <input type="text" id="golongan_darah" name="golongan_darah" required />
+
+        <label for="pernah_paud_tk">8. Pernah PAUD/TK:</label>
+        <select id="pernah_paud_tk" name="pernah_paud_tk" required>
+          <option value="ya">Ya</option>
+          <option value="tidak">Tidak</option>
+        </select>
+
+        <label for="ukuran_baju_celana">10. Ukuran Baju/Celana:</label>
+        <input
+          type="text"
+          id="ukuran_baju_celana"
+          name="ukuran_baju_celana"
+          required
+        />
+
+        <label for="nisn_nis">11. NISN/NIS:</label>
+        <input type="text" id="nisn_nis" name="nisn_nis" required />
+
+        <label for="status_dalam_keluarga">12. Status Dalam Keluarga:</label>
+        <input
+          type="text"
+          id="status_dalam_keluarga"
+          name="status_dalam_keluarga"
+          required
+        />
+
+        <label for="yatim_piatu">13. Yatim/Piatu:</label>
+        <select id="yatim_piatu" name="yatim_piatu" required>
+          <option value="ya">Ya</option>
+          <option value="tidak">Tidak</option>
+        </select>
+
+        <label for="diterima_kelas_tanggal"
+          >14. Diterima di Kelas/Tanggal:</label
+        >
+        <input
+          type="text"
+          id="diterima_kelas_tanggal"
+          name="diterima_kelas_tanggal"
+          required
+        />
+
+        <label for="asal_sd_tk">15. Asal SD/Asal TK:</label>
+        <input type="text" id="asal_sd_tk" name="asal_sd_tk" required />
+
+        <!-- Nama Orang Tua -->
+        <p>16. Nama Orang Tua:</p>
+        <label for="ayah_kandung">a. Ayah Kandung:</label>
+        <input type="text" id="ayah_kandung" name="ayah_kandung" required />
+
+        <label for="ibu_kandung">b. Ibu Kandung:</label>
+        <input type="text" id="ibu_kandung" name="ibu_kandung" required />
+
+        <!-- Pendidikan Terakhir Orang Tua -->
+        <p>17. Pendidikan Terakhir Orang Tua:</p>
+        <label for="pendidikan_ayah">a. Ayah Kandung:</label>
+        <input
+          type="text"
+          id="pendidikan_ayah"
+          name="pendidikan_ayah"
+          required
+        />
+
+        <label for="pendidikan_ibu">b. Ibu Kandung:</label>
+        <input type="text" id="pendidikan_ibu" name="pendidikan_ibu" required />
+
+        <!-- Pekerjaan Orang Tua -->
+        <p>18. Pekerjaan Orang Tua:</p>
+        <label for="pekerjaan_ayah">a. Ayah Kandung:</label>
+        <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" required />
+
+        <label for="pekerjaan_ibu">b. Ibu Kandung:</label>
+        <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" required />
+
+        <!-- Penghasilan Orang Tua -->
+        <p>19. Penghasilan Orang Tua:</p>
+        <label for="penghasilan_ayah">a. Ayah Kandung:</label>
+        <input
+          type="text"
+          id="penghasilan_ayah"
+          name="penghasilan_ayah"
+          required
+        />
+
+        <label for="penghasilan_ibu">b. Ibu Kandung:</label>
+        <input
+          type="text"
+          id="penghasilan_ibu"
+          name="penghasilan_ibu"
+          required
+        />
+
+        <!-- Wali Santri -->
+        <p>20. Wali Santri:</p>
+        <label for="nama_wali">a. Nama:</label>
+        <input type="text" id="nama_wali" name="nama_wali" required />
+
+        <label for="alamat_wali">b. Alamat:</label>
+        <input type="text" id="alamat_wali" name="alamat_wali" required />
+
+        <label for="no_hp_wali">c. No HP:</label>
+        <input type="tel" id="no_hp_wali" name="no_hp_wali" required />
+
+        <!-- Data Tambahan -->
+        <label for="agama_orang_tua">21. Agama Orang Tua:</label>
+        <input
+          type="text"
+          id="agama_orang_tua"
+          name="agama_orang_tua"
+          required
+        />
+
+        <label for="alamat_tempat_tinggal">22. Alamat Tempat Tinggal:</label>
+        <input
+          type="text"
+          id="alamat_tempat_tinggal"
+          name="alamat_tempat_tinggal"
+          required
+        />
+
+        <label for="no_hp_orang_tua">23. No HP Orang Tua:</label>
+        <input
+          type="tel"
+          id="no_hp_orang_tua"
+          name="no_hp_orang_tua"
+          required
+        />
+
+        <label for="penyakit_diderita_medis"
+          >24a. Penyakit yang Diderita (Medis):</label
+        >
+        <input
+          type="text"
+          id="penyakit_diderita_medis"
+          name="penyakit_diderita_medis"
+        />
+
+        <label for="penyakit_diderita_non_medis"
+          >24b. Penyakit yang Diderita (Non-Medis):</label
+        >
+        <input
+          type="text"
+          id="penyakit_diderita_non_medis"
+          name="penyakit_diderita_non_medis"
+        />
+
+        <label for="hobi">25. Hobi:</label>
+        <input type="text" id="hobi" name="hobi" required />
+
+        <label for="cita_cita">26. Cita-Cita:</label>
+        <input type="text" id="cita_cita" name="cita_cita" required />
+
+        <label for="motivasi_masuk_pesantren"
+          >27. Motivasi Ingin Masuk ke Pesantren:</label
+        >
+        <textarea
+          id="motivasi_masuk_pesantren"
+          name="motivasi_masuk_pesantren"
+          rows="4"
+          required
+        ></textarea>
+
+        <label for="makanan_alergi">28. Makanan yang Alergi:</label>
+        <input type="text" id="makanan_alergi" name="makanan_alergi" />
+
+        <!-- ... (Lanjutkan dengan elemen formulir sesuai kebutuhan Anda) ... -->
+
+        <!-- Tombol Kirim -->
+        <button type="submit">Kirim</button>
+      </fieldset>
+    </form>
+
+    <script>
+      // Tambahkan skrip JavaScript untuk validasi atau interaksi tambahan jika diperlukan
+    </script>
+  </body>
+</html>
